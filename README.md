@@ -33,7 +33,7 @@ The project demonstrates that:
 - A simple Greedy algorithm is often sufficient for locally solvable problems, providing quick and effective results.
 - Complex algorithms like Simulated Annealing and Genetic Algorithms are less effective for this particular problem due to the additional computational overhead without significant gains in performance.
 
-![Algorithm Comparison Screenshot](screenshot_comparison.png)
+![Algorithm Comparison Screenshot](Capture1.PNG)
 
 ## Lessons Learned
 - Optimization techniques must be chosen based on problem characteristics.
