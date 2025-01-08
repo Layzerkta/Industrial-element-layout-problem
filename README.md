@@ -4,7 +4,7 @@
 
 The visualization function demonstrates how biscuits are placed on the roll. Each biscuit type is represented by a distinct color, while unused cases are shown in white.
 
-![Visualization Screenshot](screenshot_visualization.png)
+![Visualization Screenshot](Capture.PNG)
 
 - Yellow: Biscuit Type 0
 - Orange: Biscuit Type 1
