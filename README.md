@@ -1,71 +1,44 @@
-# Optimisation de l'agencement des biscuits sur un rouleau de pâte
+# Documentation: Optimization of Biscuit Placement on a Roll
 
-## Description
-Ce projet vise à optimiser la disposition de différents types de biscuits sur un rouleau de pâte de 500 unités de longueur. L'objectif est de maximiser l'utilisation de la pâte tout en respectant les contraintes suivantes :
+## Visualizing Biscuit Placement
 
-- Éviter les zones contenant des défauts sur le rouleau.
-- Empêcher les chevauchements entre les biscuits.
-- Respecter les restrictions spécifiques à chaque type de biscuit.
+The visualization function demonstrates how biscuits are placed on the roll. Each biscuit type is represented by a distinct color, while unused cases are shown in white.
 
-Chaque biscuit a des caractéristiques propres, telles que sa taille et ses exigences de positionnement.
+![Visualization Screenshot](screenshot_visualization.png)
 
-## Installation
+- Yellow: Biscuit Type 0
+- Orange: Biscuit Type 1
+- Red: Biscuit Type 2
+- Purple: Biscuit Type 3
 
-1. Clonez le dépôt :
-   ```bash
-   git clone <URL_DU_DEPOT>
-   cd <NOM_DU_DEPOT>
-   ```
+The visual also indicates that there were 178 unused cases in this instance.
 
-2. Installez les dépendances requises :
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Algorithmic Approaches
 
-3. Lancez le projet dans un environnement Jupyter Notebook :
-   ```bash
-   jupyter notebook Projectv2.ipynb
-   ```
+### 1. Greedy Algorithm
+- **Execution Time**: 0.002 seconds
+- **Performance**: 675 points with only 15 unused cases.
+- **Description**: This algorithm places biscuits by maximizing the value-to-length ratio at each step. It is simple, fast, and effective for problems where local decisions yield near-optimal solutions.
 
-## Utilisation
+### 2. Simulated Annealing
+- **Execution Time**: 20 seconds
+- **Performance**: Average score of 400 points with 42 unused cases.
+- **Description**: Simulated Annealing explores the entire solution space and accepts worse solutions temporarily to escape local minima. However, for this problem, its exploratory nature does not yield significant benefits over the Greedy algorithm.
 
-1. Ouvrez le fichier `Projectv2.ipynb` dans Jupyter Notebook.
-2. Exécutez les cellules de code dans l'ordre pour importer les défauts, configurer les paramètres des biscuits, et lancer l'algorithme d'optimisation.
-3. Les résultats incluent :
-   - Une représentation visuelle de la disposition des biscuits sur le rouleau.
-   - Les statistiques de performance (longueur utilisée, gaspillage, etc.).
+### 3. Genetic Algorithm
+- **Execution Time**: 103 seconds (for 100 individuals and 500 generations)
+- **Performance**: Achieves high scores of 690 points but generates more unused cases than the Greedy algorithm.
+- **Description**: The Genetic Algorithm combines randomness and selection pressure to evolve solutions over generations. While powerful, its high computational cost is a limiting factor.
 
-## Exemples de résultats
+## Conclusion
+The project demonstrates that:
+- A simple Greedy algorithm is often sufficient for locally solvable problems, providing quick and effective results.
+- Complex algorithms like Simulated Annealing and Genetic Algorithms are less effective for this particular problem due to the additional computational overhead without significant gains in performance.
 
-Voici quelques exemples de visualisations générées par le projet :
+![Algorithm Comparison Screenshot](screenshot_comparison.png)
 
-### Exemple 1 : Disposition optimisée
-![Exemple 1](path/to/screenshot1.png)
+## Lessons Learned
+- Optimization techniques must be chosen based on problem characteristics.
+- Balancing execution time and solution quality is critical in real-world applications.
 
-### Exemple 2 : Zones de défauts et gaspillage
-![Exemple 2](path/to/screenshot2.png)
-
-Remplacez les chemins vers les images par vos propres captures d'écran.
-
-## Contributions
-
-Les contributions sont les bienvenues ! Veuillez suivre les étapes suivantes :
-
-1. Forkez le dépôt.
-2. Créez une branche pour votre fonctionnalité ou correction de bug :
-   ```bash
-   git checkout -b ma-fonctionnalite
-   ```
-3. Faites vos modifications et commitez-les :
-   ```bash
-   git commit -m "Ajout de ma fonctionnalité"
-   ```
-4. Poussez les modifications vers votre branche :
-   ```bash
-   git push origin ma-fonctionnalite
-   ```
-5. Ouvrez une pull request.
-
-## License
-
-Ce projet est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus de détails.
+This project underscores the importance of aligning algorithm complexity with problem requirements.
