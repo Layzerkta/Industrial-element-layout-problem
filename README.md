@@ -11,8 +11,6 @@ The visualization function demonstrates how biscuits are placed on the roll. Eac
 - Red: Biscuit Type 2
 - Purple: Biscuit Type 3
 
-The visual also indicates that there were 178 unused cases in this instance.
-
 ## Algorithmic Approaches
 
 ### 1. Greedy Algorithm
