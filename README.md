@@ -22,11 +22,17 @@ The visualization function demonstrates how biscuits are placed on the roll. Eac
 - **Execution Time**: 20 seconds
 - **Performance**: Average score of 400 points with 42 unused cases.
 - **Description**: Simulated Annealing explores the entire solution space and accepts worse solutions temporarily to escape local minima. However, for this problem, its exploratory nature does not yield significant benefits over the Greedy algorithm.
+  
+![Visualization Screenshot](Capture3.PNG)
+
 
 ### 3. Genetic Algorithm
 - **Execution Time**: 103 seconds (for 100 individuals and 500 generations)
 - **Performance**: Achieves high scores of 690 points but generates more unused cases than the Greedy algorithm.
 - **Description**: The Genetic Algorithm combines randomness and selection pressure to evolve solutions over generations. While powerful, its high computational cost is a limiting factor.
+  
+![Visualization Screenshot](Capture2.PNG)
+
 
 ## Conclusion
 The project demonstrates that:
@@ -34,6 +40,8 @@ The project demonstrates that:
 - Complex algorithms like Simulated Annealing and Genetic Algorithms are less effective for this particular problem due to the additional computational overhead without significant gains in performance.
 
 ![Algorithm Comparison Screenshot](Capture1.PNG)
+
+
 
 ## Lessons Learned
 - Optimization techniques must be chosen based on problem characteristics.
